@@ -1,0 +1,28 @@
+---
+title: "Report on Gun Murders"
+author: "Adele Taylor"
+date: "07/05/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## R Markdown
+
+This is my first attempt at a Rmarkdown report.
+
+```{r, echo=FALSE}
+library(tidyverse)
+library(dslabs)
+data("murders")
+```
+
+## A Plot
+
+
+```{r murders by state}
+ggplot(murders, aes(state, total))+geom_col()
+```
